@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Login para 1 usuario</title>
+	</head>
+
+	<body>
+		<script language="JavaScript">
+			function go() {
+				if (document.form.password.value == 'admin' && document.form.login.value == 'admin') {
+					document.form.submit();
+				} else {
+					alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");
+				}
+			}
+		</script>
+		<FORM name=form action="index.html">
+
+			<p>
+				Usuario:
+				<input type="text" name=login>
+			</p>
+			<p>
+				Contraseña:
+				<input type="password" name=password>
+			</p>
+			<input onclick=go() type="button" value=Acceder>
+
+		</FORM>
+	</body>
+</html>
