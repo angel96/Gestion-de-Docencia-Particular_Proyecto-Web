@@ -1,0 +1,11 @@
+create or replace TRIGGER FacturasImpagadas
+BEFORE 
+INSERT OR UPDATE OF OID_A ON Matriculas
+FOR EACH ROW
+ BEGIN
+  IF (NumeroFactImpagadasAlumno(:NEW.OID_A)>= 3)  
+  THEN
+   raise_application_error(-458,'No se puede realizar ninguna operación si se tienen 3 o más facturas impagadas');
+  END IF;
+  
+  END;

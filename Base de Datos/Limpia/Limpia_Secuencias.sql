@@ -1,0 +1,22 @@
+Drop sequence OID_A;
+Drop sequence OID_V;
+Drop sequence OID_Mat;
+Drop sequence OID_Asig;
+Drop sequence OID_EHD;
+Drop sequence OID_M;
+Drop sequence OID_P;
+Drop sequence OID_S;
+Drop sequence OID_T;
+Drop sequence OID_U;
+Drop sequence OID_Z;
+Drop sequence OID_F;
+
+Drop sequence SEC_asignaturas;
+Drop sequence SEC_eshijode;
+Drop sequence SEC_facturas;
+Drop sequence SEC_matriculas;
+Drop sequence SEC_modalidades;
+Drop sequence SEC_salarios;
+Drop sequence SEC_usuarios;
+Drop sequence SEC_valoraciones;
+Drop sequence SEC_zonaresidencias;

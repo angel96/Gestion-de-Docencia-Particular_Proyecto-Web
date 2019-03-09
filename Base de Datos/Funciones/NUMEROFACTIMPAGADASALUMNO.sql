@@ -1,0 +1,7 @@
+create or replace FUNCTION NumeroFactImpagadasAlumno(Alumno IN Matriculas.OID_A%TYPE)
+RETURN NUMBER IS Contador NUMBER;
+BEGIN
+SELECT count(distinct FECHADEPAGO) INTO Contador FROM FACTURAS,MATRICULAS
+WHERE Matriculas.OID_A=Alumno AND PAGADO=0 AND FACTURAS.OID_MAT=MATRICULAS.OID_MAT;
+RETURN Contador;
+END;

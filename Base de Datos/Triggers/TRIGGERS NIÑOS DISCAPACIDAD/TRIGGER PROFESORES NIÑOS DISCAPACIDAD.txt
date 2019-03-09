@@ -1,0 +1,11 @@
+create or replace TRIGGER ProfesoresNiñosDiscapacidad
+BEFORE 
+INSERT OR UPDATE OF OID_Mat ON Matriculas
+FOR EACH ROW
+ BEGIN
+  IF (DiscapacidadAlumno(:NEW.OID_A)=1 AND NombreModalidadProfesor(:NEW.OID_P)!='Pedagogía')
+  THEN
+   raise_application_error(-658,'El profesor debe estar especializado en ese campo');
+  END IF;
+  
+  END;
